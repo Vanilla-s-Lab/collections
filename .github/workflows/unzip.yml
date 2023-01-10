@@ -1,0 +1,27 @@
+name: unzip
+on: push
+
+jobs:
+  unzip:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: cachix/install-nix-action@v18
+      - uses: actions/checkout@v3
+
+      - run: nix flake update
+      - run: nix build .#unzip.x86_64-linux -v -L
+
+      - uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: vanilla-s-lab
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: docker load < $(readlink result)
+      - run: docker tag unzip ghcr.io/vanilla-s-lab/unzip:0.1
+      - run: docker push ghcr.io/vanilla-s-lab/unzip:0.1

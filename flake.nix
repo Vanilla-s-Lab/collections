@@ -8,5 +8,16 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system}; in
 
-      rec { });
+      rec {
+        unzip = pkgs.dockerTools.buildImage {
+          name = "unzip";
+          tag = "latest";
+
+          copyToRoot = pkgs.buildEnv {
+            name = "image-root";
+            paths = [ pkgs.unzip ];
+            pathsToLink = [ "/bin" ];
+          };
+        };
+      });
 }
