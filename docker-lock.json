@@ -1,0 +1,16 @@
+{
+	"dockerfiles": {
+		"Dockerfile": [
+			{
+				"name": "ghcr.io/vanilla-s-lab/busybox",
+				"tag": "0.1",
+				"digest": "ec08d71829e6b20137eeeec10fcfdd703e9ba6daa56cae856b73f3798eb77b25"
+			},
+			{
+				"name": "ghcr.io/book-searcher-org/book-searcher",
+				"tag": "0.8.0",
+				"digest": "ac6d5a88cfab8a5c896149123d48cef571388aa12a7d4f2b87147b81a56785f9"
+			}
+		]
+	}
+}
