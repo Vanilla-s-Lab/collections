@@ -1,0 +1,23 @@
+name: book-searcher
+on: push
+
+jobs:
+  book-searcher:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: vanilla-s-lab
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: docker build -t book-searcher .
+      - run: docker tag book-searcher ghcr.io/vanilla-s-lab/book-searcher:0.8.0
+      - run: docker push ghcr.io/vanilla-s-lab/book-searcher:0.8.0
