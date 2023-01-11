@@ -9,13 +9,13 @@
       let pkgs = nixpkgs.legacyPackages.${system}; in
 
       rec {
-        unzip = pkgs.dockerTools.buildImage {
-          name = "unzip";
+        busybox = pkgs.dockerTools.buildImage {
+          name = "busybox";
           tag = "latest";
 
           copyToRoot = pkgs.buildEnv {
             name = "image-root";
-            paths = [ pkgs.unzip ];
+            paths = [ pkgs.busybox ];
             pathsToLink = [ "/bin" ];
           };
         };
