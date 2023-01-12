@@ -8,8 +8,8 @@
 			},
 			{
 				"name": "ghcr.io/book-searcher-org/book-searcher",
-				"tag": "0.8.0",
-				"digest": "ac6d5a88cfab8a5c896149123d48cef571388aa12a7d4f2b87147b81a56785f9"
+				"tag": "0.8.2",
+				"digest": "11e0798c656af8482218756b79bd451fa51fa0c27882515bc556c9e9108ef0c1"
 			}
 		]
 	}
