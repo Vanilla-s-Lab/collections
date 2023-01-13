@@ -1,4 +1,4 @@
-FROM ghcr.io/vanilla-s-lab/busybox:0.1@sha256:ec08d71829e6b20137eeeec10fcfdd703e9ba6daa56cae856b73f3798eb77b25 as index-data
+FROM ghcr.io/vanilla-s-lab/busybox-static:0.1@sha256:e213690b36bed5c16b4483eb0bd5a8f9f14785f24148e61fc0090c4c24ba0079 as index-data
 
 ADD https://github.com/zlib-searcher/index/releases/download/0.8.2/index_all_0.8.2.zip /root/
 RUN ls -al /root && mkdir /index && /bin/unzip /root/index_all_0.8.2.zip -d /

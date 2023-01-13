@@ -2,9 +2,9 @@
 	"dockerfiles": {
 		"Dockerfile": [
 			{
-				"name": "ghcr.io/vanilla-s-lab/busybox",
+				"name": "ghcr.io/vanilla-s-lab/busybox-static",
 				"tag": "0.1",
-				"digest": "ec08d71829e6b20137eeeec10fcfdd703e9ba6daa56cae856b73f3798eb77b25"
+				"digest": "e213690b36bed5c16b4483eb0bd5a8f9f14785f24148e61fc0090c4c24ba0079"
 			},
 			{
 				"name": "ghcr.io/book-searcher-org/book-searcher",
