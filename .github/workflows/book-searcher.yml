@@ -19,5 +19,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - run: docker build -t book-searcher .
-      - run: docker tag book-searcher ghcr.io/vanilla-s-lab/book-searcher:0.8.2
-      - run: docker push ghcr.io/vanilla-s-lab/book-searcher:0.8.2
+      - run: docker tag book-searcher ghcr.io/vanilla-s-lab/book-searcher:0.8.3
+      - run: docker push ghcr.io/vanilla-s-lab/book-searcher:0.8.3
