@@ -1,5 +1,5 @@
 name: book-searcher
-on: workflow_dispatch
+on: push
 
 jobs:
   book-searcher:
