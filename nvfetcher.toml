@@ -1,0 +1,3 @@
+[github-doodle]
+src.git = "https://github.com/zhabinsky/github-doodle.git"
+fetch.git = "https://github.com/zhabinsky/github-doodle.git"

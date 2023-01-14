@@ -1,0 +1,20 @@
+{
+    "github-doodle": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "github-doodle",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "0258a9d2559ade48b44aad3c7833b9008536e1bd",
+            "sha256": "sha256-Val27/1yTfPaK8ZVBIPYGo8Hp2qo25z3R6m/zcHzwks=",
+            "type": "git",
+            "url": "https://github.com/zhabinsky/github-doodle.git"
+        },
+        "version": "0258a9d2559ade48b44aad3c7833b9008536e1bd"
+    }
+}
